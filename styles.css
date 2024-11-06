@@ -1,0 +1,74 @@
+body {
+    font-family: Roboto;
+    color: #333;
+    background-color: #FEFDF9;
+}
+
+.custom-nav-item-hover a:hover {
+    color: #e63946 !important;
+}
+.custom-text-muted-light {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+.custom-articles h3 {
+    color: #e63946;
+}
+
+.custom-hover-red-color:hover{
+    color: #e63946;
+}
+.custom-hover-warning:hover {
+    color: #ffc107 !important; 
+}
+
+.custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; 
+    z-index: 1;
+}
+.nav-left-10 {
+    margin-left: 40px !important;
+}
+
+
+.custom-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #FEFDF9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%); 
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+.custom-sidebar.active {
+    transform: translateX(0); 
+}
+
+.custom-overlay.active {
+    display: block; 
+}
+.custom-cursor {
+    cursor: pointer; 
+}
+.button-hover:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+.custom-news {
+    max-height: 470px;
+    overflow-y: auto;  
+}
+@media (min-width: 992px) {
+    .custom-line-height {
+        line-height: 0.9; 
+    }
+}

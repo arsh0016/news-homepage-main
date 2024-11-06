@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | News Homepage</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header d-flex justify-content-between align-items-center p-3">
+        <div class="header-logo">
+            <img src="assets/images/logo.svg" alt="Logo" class="img-fluid" style="width: 40px;">
+        </div>
+        <nav class="d-none d-md-flex custom-nav-item-hover ms-auto"> 
+            <a href="#" class="text-dark text-decoration-none mx-4 fw-medium">Home</a>
+            <a href="#" class="text-dark text-decoration-none mx-4 fw-medium">New</a>
+            <a href="#" class="text-dark text-decoration-none mx-4 fw-medium">Popular</a>
+            <a href="#" class="text-dark text-decoration-none mx-4 fw-medium">Trending</a>
+            <a href="#" class="text-dark text-decoration-none  fw-medium">Categories</a> 
+        </nav>
+        <div class="burger-icon d-md-none custom-cursor" onclick="toggleMenu()">
+            <img src="assets/images/icon-menu.svg" alt="Menu Icon">
+        </div>
+    </header>
+    <div class="custom-overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="custom-sidebar d-md-none" id="sidebar">
+        <div class="close-icon position-relative"  onclick="toggleMenu()">
+            <img src="assets/images/icon-menu-close.svg" alt="Close Icon" class="position-absolute custom-cursor" style="top: 10px; right: 10px;">
+        </div>
+        <nav class="d-flex flex-column px-3 mt-4 custom-nav-item-hover">
+            <a href="#" class="text-dark text-decoration-none py-2 fw-bold">Home</a>
+            <a href="#" class="text-dark text-decoration-none py-2 fw-bold">New</a>
+            <a href="#" class="text-dark text-decoration-none py-2 fw-bold">Popular</a>
+            <a href="#" class="text-dark text-decoration-none py-2 fw-bold">Trending</a>
+            <a href="#" class="text-dark text-decoration-none py-2 fw-bold">Categories</a>
+        </nav>
+    </div>
+    <main class="main-content container">
+        <div class="row">
+            <section class="highlight-article col-lg-8 mb-4">
+                <img src="assets/images/image-web-3-desktop.jpg" alt="Main Article Image" class="featured-image desktop-image img-fluid d-none d-md-block">
+                <img src="assets/images/image-web-3-mobile.jpg" alt="Main Article Image" class="featured-image mobile-image img-fluid d-block d-md-none mt-4">
+                <div class="article-info mt-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="headline">
+                                <h1 class="display-4 fw-bold custom-line-height">The Bright Future of<br> Web 3.0?</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <div class="article-summary">
+                                <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                                <a href="#" class="btn btn-danger fw-bold mt-3 align-self-start text-dark button-hover">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="custom-news col-lg-4 bg-dark text-light p-2"> 
+                <h2 class="text-warning">New</h2>
+                <ul class="list-unstyled">
+                    <li class="mt-2 mb-2"> 
+                        <a href="#" class="text-light fw-bold text-decoration-none custom-hover-warning">Hydrogen VS Electric Cars</a>
+                        <p class="custom-text-muted-light">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        <hr class="separator bg-secondary">
+                    </li>
+                    <li class="mt-2 mb-2"> 
+                        <a href="#" class="text-light fw-bold text-decoration-none custom-hover-warning">The Downsides of AI Artistry</a>
+                        <p class="custom-text-muted-light">What are the possible adverse effects of on-demand AI image generation?</p>
+                        <hr class="separator bg-secondary">
+                    </li>
+                    <li>
+                        <a href="#" class="text-light fw-bold text-decoration-none custom-hover-warning">Is VC Funding Drying Up?</a>
+                        <p class="custom-text-muted-light">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <section class="container mt-4">
+        <div class="row">
+            <div class="related-item col-md-4 d-flex mb-4">
+                <img src="assets/images/image-retro-pcs.jpg" alt="Article 1 Image" class="img-fluid me-3" style="width: 100px; height: 100px; object-fit: cover;">
+                <div class="custom-articles">
+                    <h3 class="h5 mb-1 fw-bold">01</h3>
+                    <h4 class="h6 fw-bold custom-hover-red-color">Reviving Retro PCs</h4>
+                    <p class="text-muted">What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </div>
+            <div class="related-item col-md-4 d-flex mb-4">
+                <img src="assets/images/image-top-laptops.jpg" alt="Article 2 Image" class="img-fluid me-3" style="width: 100px; height: 100px; object-fit: cover;">
+                <div class="custom-articles">
+                    <h3 class="h5 mb-1 fw-bold">02</h3>
+                    <h4 class="h6 fw-bold custom-hover-red-color">Top 10 Laptops of 2022</h4>
+                    <p class="text-muted">Our best picks for various needs and budgets.</p>
+                </div>
+            </div>
+            <div class="related-item col-md-4 d-flex mb-4">
+                <img src="assets/images/image-gaming-growth.jpg" alt="Article 3 Image" class="img-fluid me-3" style="width: 100px; height: 100px; object-fit: cover;">
+                <div class="custom-articles">
+                    <h3 class="h5 mb-1 fw-bold">03</h3>
+                    <h4 class="h6 fw-bold custom-hover-red-color">The Growth of Gaming</h4>
+                    <p class="text-muted">How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>   
+</body>
+</html>
